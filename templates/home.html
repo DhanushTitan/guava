@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+    
+
+<div class="container" style="margin-bottom: 20px;">
+    <div class="row">
+        <div >
+            <h1 class="home_header">Guava</h1>
+        </div>
+        <div class="card">
+            <div class="card_total_kg">
+                {% for result in  total_kg %}
+                <h1 class="card_total_head">Total Kg : {{ result[1] }}</h1>
+                {% endfor %}
+            </div>
+            <div class="card_total_amount">
+                {% for result in total_amount %}
+                <h1 class="card_total_head">Total Amount : {{ result[1] }}</h1>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="card_container">
+            <!-- Add New Record -->
+            <div class="card_section">
+                <div class="add_card">
+                    <img src="{{ url_for('static', filename='add.jpg') }}" alt="add" class="home_image">
+                    <div>
+                        <h1 class="add_card_header">Add New Record</h1>
+                        <button class="add_card_btn"><a href="{{ url_for('add') }}">
+                            
+                            <samp>Add New</samp> </a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- View Record -->
+            <div class="card_section">
+                <div class="add_card">
+                    <img src="{{ url_for('static', filename='view.jpg') }}" alt="add" class="home_image">
+                    <div>
+                        <h1 class="add_card_header">View All Record</h1>
+                        <button class="add_card_btn"><a href="{{ url_for('view') }}">View</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Total Amount By single persons  -->
+            <div class="card_section">
+            
+                <div class="add_card">
+                    <img src="{{ url_for('static', filename='total_amount.jpg') }}" alt="add" class="home_image">
+                    <div>
+                        <h1 class="add_card_header">Total Amount By single persons</h1>
+                        <button class="add_card_btn"><a href="{{ url_for('totals') }}">Total Amount</a></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Total Kg By single persons  -->
+            <div class="card_section">
+            <div class="add_card">
+                <img src="{{ url_for('static', filename='total_kg.jpg') }}" alt="add" class="home_image">
+                <div>
+                    <h1 class="add_card_header">Total Kg By single persons</h1>
+                    <button class="add_card_btn"><a href="{{ url_for('total_kg') }}">Total Kg</a></button>
+                </div>
+            </div>
+            </div>
+        </div>
+   
+
+      
+    </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

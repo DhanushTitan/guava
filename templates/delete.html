@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1 class="header">Delete</h1>
+        <div class="delete_card">
+            <form action='' method="post">
+                <div class="delete_card">
+                    <img src="{{ url_for('static', filename='delete.jpg') }}" alt="add" class="home_image">
+                </div>
+                
+                <div class="delete_btn">
+                    
+                    <div>
+                        <h1 class="delete_header"> 
+                            YES to confirm
+                        </h1>
+                        <button class="delete_yes_btn" type = "submit" >Yes</button> 
+                    <a class="delete_Cancel_btn" href="{{ url_for('view') }}">Cancel</a>
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}

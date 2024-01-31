@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} View {% endblock %}
+
+{% block content %}
+
+<div style="margin-bottom: 80px;">
+    <h1 class="header">View</h1>
+    
+    {% for guava in guavas %}
+    <div class="view_card">
+        <div>
+            <p class="card_head">{{ guava.name }}</p>
+            <p class="card_item">Kg : {{ guava.kg }}</p>
+            <p class="card_item">Price : {{ guava.price }}</p>
+            <p class="card_item">Total : {{ guava.total }}</p>
+            <p class="card_item">Date : {{ guava.updated }}</p>
+        </div>
+        
+        <div class="view_card_btn">
+            <button class="view_btn_edit" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none" class="edit_icon">
+                <path d="M15.988 0L18.988 3L16.701 5.288L13.701 2.288L15.988 0ZM5 13.988H8L15.287 6.701L12.287 3.701L5 10.988V13.988Z" fill="#F8F8F8"/>
+                <path d="M16 16.988H5.158C5.132 16.988 5.105 16.998 5.079 16.998C5.046 16.998 5.013 16.989 4.979 16.988H2V2.98804H8.847L10.847 0.988037H2C0.897 0.988037 0 1.88404 0 2.98804V16.988C0 18.092 0.897 18.988 2 18.988H16C16.5304 18.988 17.0391 18.7773 17.4142 18.4023C17.7893 18.0272 18 17.5185 18 16.988V8.32004L16 10.32V16.988Z" fill="#F8F8F8"/>
+              </svg><a  href='edit/{{guava.id}}'>Edit</a></button>
+            <button class="view_btn_delete" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none" class="edit_icon">
+                    <path d="M14 1H10.5L9.5 0H4.5L3.5 1H0V3H14M1 16C1 16.5304 1.21071 17.0391 1.58579 17.4142C1.96086 17.7893 2.46957 18 3 18H11C11.5304 18 12.0391 17.7893 12.4142 17.4142C12.7893 17.0391 13 16.5304 13 16V4H1V16Z" fill="#F8F8F8"/>
+                  </svg>
+                  <a  href='delete/{{guava.id}}'>Delete</a></button>
+        </div>
+        
+    </div>
+    {% endfor %}
+    
+</div>
+
+
+{% endblock %}

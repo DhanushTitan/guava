@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit {% endblock %}
+
+{% block content %}
+    <div class="container ">
+        <div class="row">
+            <h1 class="header">
+                Edit   
+            </h1>
+            <div class="delete_card">
+                <img src="{{ url_for('static', filename='update.jpg') }}" alt="add" class="home_image">
+            </div>
+            <div class="class_add" >
+                <form method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" name="name"  value="{{ guava.name }}" />
+                    <label for="kg">Kg</label>
+                    <input type="text" name="kg" value="{{ guava.kg }}" />
+                    <label for="price">Price</label>
+                    <input type="text" name="price"  value="{{ guava.price }}" />
+                    
+                    <div class="form_btn_card">
+                        <button class="form_btn" type="submit" value="Submit">Submit</button>
+                        
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    
+{% endblock %}

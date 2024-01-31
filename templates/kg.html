@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Guava Total KG {% endblock %}
+
+{% block content %}
+
+    <h1 class="header">Guava Total KG</h1>
+    <div>
+        {% for result in query %}
+            
+        <div class="view_card">
+            <div>
+                <p  class="card_head">{{ result[0] }}: {{ result[1] }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+  
+{% endblock %}

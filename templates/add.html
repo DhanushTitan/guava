@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Add {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1 class="header">
+             Add New Member   
+        </h1>
+
+        <div class="class_add">
+            <form method="POST">
+                <label for="name">Name</label>
+                <input type="text" name="name"/>
+                <label for="kg">Kg</label>
+                <input type="text" name="kg"/>
+                <label for="price">Price</label>
+                <input type="text" name="price"/>
+                
+                <div class="form_btn_card">
+                    <button class="form_btn" type="submit" value="Submit">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+           
+    </div>
+</div>
+
+{% endblock %}
